@@ -1,0 +1,14 @@
+{
+    "namespace": "tromposchile.cl",
+    "description": "Tienda de trompos, venta online.",
+    "required_fields": [],
+    "required_files": [
+        "index.html",
+        "css/index.css",
+        "js/index.js"
+    ],
+    "lang": "HTML",
+    "framework": "HTML5",
+    "name": "tromposchile.cl",
+    "scene": "default_html_project"
+}

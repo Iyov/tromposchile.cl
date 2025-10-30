@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TromposChile - Especialistas en trompos, herramientas e insumos de metalúrgica. Más de 10 años de experiencia. Placas, betoneras, hormigón y más.">
+    <meta name="keywords" content="trompos, metalúrgica, herramientas, placas, betoneras, hormigón, Chile, equipos industriales">
+    <meta name="author" content="TromposChile">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tromposchile.cl/">
+    <meta property="og:title" content="TromposChile - Especialistas en Metalúrgica">
+    <meta property="og:description" content="Más de 10 años de experiencia en trompos, herramientas e insumos de metalúrgica. Placas, betoneras, hormigón y más.">
+    <meta property="og:image" content="https://tromposchile.cl/assets/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tromposchile.cl/">
+    <meta property="twitter:title" content="TromposChile - Especialistas en Metalúrgica">
+    <meta property="twitter:description" content="Más de 10 años de experiencia en trompos, herramientas e insumos de metalúrgica.">
+    <meta property="twitter:image" content="https://tromposchile.cl/assets/logo.png">
+
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <title>TromposChile - Especialistas en Metalúrgica | Trompos, Herramientas e Insumos</title>
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TromposChile",
+        "url": "https://tromposchile.cl",
+        "logo": "https://tromposchile.cl/assets/logo.png",
+        "description": "Especialistas en trompos, herramientas e insumos de metalúrgica con más de 10 años de experiencia",
+        "foundingDate": "2013",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "CL",
+            "addressLocality": "Chile"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+56941058461",
+            "contactType": "customer service",
+            "email": "TromposChile@gmail.com"
+        },
+        "sameAs": [
+            "https://www.instagram.com/TromposChile/",
+            "https://www.facebook.com/TromposChile",
+            "https://www.threads.com/@TromposChile",
+            "https://www.tiktok.com/@TromposChile",
+            "https://www.youtube.com/@TromposChile"
+        ]
+    }
+    </script>
+</head>
+<body class="font-sans transition-colors duration-300">
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-purple-600 z-50 transition-all duration-300"></div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white dark:bg-gray-900 shadow-lg z-40 transition-colors duration-300">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center cursor-pointer" onclick="scrollToTop()">
+                    <img src="https://via.placeholder.com/60x60/3B82F6/FFFFFF?text=TC" alt="TromposChile Logo" class="h-12 w-12 rounded-lg">
+                    <span class="ml-3 text-xl font-bold text-gray-800 dark:text-white">TromposChile</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="#nosotros" class="nav-link">Nosotros</a>
+                    <a href="#categorias" class="nav-link">Categorías</a>
+                    <a href="#destacados" class="nav-link">Destacados</a>
+                    <a href="#tienda" class="nav-link">Tienda</a>
+                    <a href="#testimonios" class="nav-link">Testimonios</a>
+                    <a href="#blog" class="nav-link">Blog</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </div>
+
+                <!-- Theme Toggle & Cart -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:inline"></i>
+                    </button>
+                    <button id="cart-toggle" class="relative p-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white transition-colors">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </button>
+                    <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                        <i class="fas fa-bars text-gray-800 dark:text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="lg:hidden hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="#nosotros" class="nav-link-mobile">Nosotros</a>
+                    <a href="#categorias" class="nav-link-mobile">Categorías</a>
+                    <a href="#destacados" class="nav-link-mobile">Destacados</a>
+                    <a href="#tienda" class="nav-link-mobile">Tienda</a>
+                    <a href="#testimonios" class="nav-link-mobile">Testimonios</a>
+                    <a href="#blog" class="nav-link-mobile">Blog</a>
+                    <a href="#faq" class="nav-link-mobile">FAQ</a>
+                    <a href="#contacto" class="nav-link-mobile">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 text-white py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">TromposChile</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">Especialistas en Metalúrgica con más de 10 años de experiencia</p>
+                <p class="text-lg mb-8 opacity-80">Trompos, herramientas e insumos de la más alta calidad</p>
+                <a href="#tienda" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Ver Productos
+                </a>
+            </div>
+        </section>
+
+        <!-- Nosotros Section -->
+        <section id="nosotros" class="py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">Nosotros</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://via.placeholder.com/500x500/3B82F6/FFFFFF?text=TromposChile" alt="TromposChile Logo" class="w-full max-w-md mx-auto rounded-lg shadow-lg">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-white">Más de 10 años de experiencia</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                            En TromposChile somos especialistas en el rubro de la metalúrgica con más de una década de experiencia. 
+                            Nos dedicamos a la fabricación, venta y distribución de trompos, herramientas e insumos de la más alta calidad.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                            Nuestro compromiso es brindar soluciones integrales para la industria, ofreciendo productos duraderos 
+                            y confiables que cumplan con los más altos estándares de calidad.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Trabajamos con empresas de todo Chile, proporcionando equipos especializados para placas, betoneras, 
+                            hormigón y mucho más. Nuestra experiencia nos respalda.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorías Section -->
+        <section id="categorias" class="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">Categorías</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                        <i class="fas fa-layer-group text-4xl text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Placas</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Placas de alta resistencia para aplicaciones industriales y construcción.</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                        <i class="fas fa-cog text-4xl text-green-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Betoneras</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Equipos especializados para mezcla de hormigón y materiales de construcción.</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                        <i class="fas fa-cube text-4xl text-purple-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Hormigón</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Herramientas y accesorios para trabajo con hormigón y concreto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Productos Destacados Section -->
+        <section id="destacados" class="py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">Productos Destacados</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <img src="https://via.placeholder.com/300x200/3B82F6/FFFFFF?text=Trompo+Industrial" alt="Trompo Industrial" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-white">Trompo Industrial Pro</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-3">Trompo de alta resistencia para uso industrial intensivo.</p>
+                            <p class="text-2xl font-bold text-blue-600 dark:text-blue-400">$299.990</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <img src="https://via.placeholder.com/300x200/10B981/FFFFFF?text=Betonera+Max" alt="Betonera Max" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-white">Betonera Max 350L</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-3">Betonera de 350 litros con motor de alta potencia.</p>
+                            <p class="text-2xl font-bold text-green-600 dark:text-green-400">$1.299.990</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <img src="https://via.placeholder.com/300x200/8B5CF6/FFFFFF?text=Placa+Steel" alt="Placa Steel" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-white">Placa Steel Premium</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-3">Placa de acero reforzado para construcción pesada.</p>
+                            <p class="text-2xl font-bold text-purple-600 dark:text-purple-400">$89.990</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <img src="https://via.placeholder.com/300x200/F59E0B/FFFFFF?text=Kit+Herramientas" alt="Kit Herramientas" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-white">Kit Herramientas Completo</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-3">Set completo de herramientas para metalúrgica.</p>
+                            <p class="text-2xl font-bold text-yellow-600 dark:text-yellow-400">$199.990</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tienda Section -->
+        <section id="tienda" class="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">Tienda</h2>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="trompos">Trompos</button>
+                    <button class="filter-btn" data-filter="betoneras">Betoneras</button>
+                    <button class="filter-btn" data-filter="placas">Placas</button>
+                    <button class="filter-btn" data-filter="herramientas">Herramientas</button>
+                </div>
+
+                <!-- Products Grid -->
+                <div id="products-grid" class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios Section -->
+        <section id="testimonios" class="py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">Testimonios</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 text-center shadow-lg">
+                        <img src="https://via.placeholder.com/100x100/3B82F6/FFFFFF?text=JC" alt="Juan Carlos" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-white">Juan Carlos Pérez</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3">Constructor</p>
+                        <p class="text-gray-600 dark:text-gray-300 italic">"Excelente calidad en todos sus productos. Llevo 5 años comprando aquí y siempre me sorprenden con su servicio. ¡Muy recomendados!"</p>
+                        <div class="flex justify-center mt-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 text-center shadow-lg">
+                        <img src="https://via.placeholder.com/100x100/10B981/FFFFFF?text=MR" alt="María Rodriguez" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-white">María Rodríguez</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3">Ingeniera Civil</p>
+                        <p class="text-gray-600 dark:text-gray-300 italic">"Los equipos que compré han funcionado perfectamente en nuestras obras. La atención al cliente es excepcional. ¡Gracias por todo!"</p>
+                        <div class="flex justify-center mt-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 text-center shadow-lg">
+                        <img src="https://via.placeholder.com/100x100/8B5CF6/FFFFFF?text=AS" alt="Andrés Silva" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-white">Andrés Silva</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3">Contratista</p>
+                        <p class="text-gray-600 dark:text-gray-300 italic">"Productos de primera calidad y entrega rápida. El equipo de TromposChile siempre está dispuesto a ayudar. ¡Los recomiendo al 100%!"</p>
+                        <div class="flex justify-center mt-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">Blog</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer" onclick="openBlogModal('blog1')">
+                        <img src="https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=Metalurgia+Industrial" alt="Metalurgia Industrial" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Innovaciones en Metalurgia Industrial</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Descubre las últimas tendencias y tecnologías en el sector metalúrgico que están revolucionando la industria.</p>
+                            <span class="text-blue-600 dark:text-blue-400 font-semibold">Leer más →</span>
+                        </div>
+                    </article>
+                    <article class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer" onclick="openBlogModal('blog2')">
+                        <img src="https://via.placeholder.com/400x250/10B981/FFFFFF?text=Mantenimiento+Equipos" alt="Mantenimiento de Equipos" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Guía de Mantenimiento de Equipos</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Consejos esenciales para mantener tus equipos de metalurgia en óptimas condiciones y extender su vida útil.</p>
+                            <span class="text-green-600 dark:text-green-400 font-semibold">Leer más →</span>
+                        </div>
+                    </article>
+                    <article class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer" onclick="openBlogModal('blog3')">
+                        <img src="https://via.placeholder.com/400x250/8B5CF6/FFFFFF?text=Seguridad+Industrial" alt="Seguridad Industrial" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Seguridad en el Trabajo Industrial</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Protocolos y mejores prácticas de seguridad para trabajar con equipos de metalurgia de manera segura.</p>
+                            <span class="text-purple-600 dark:text-purple-400 font-semibold">Leer más →</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">Preguntas Frecuentes</h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Qué garantía tienen sus productos?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Todos nuestros productos cuentan con garantía de 12 meses contra defectos de fabricación. Además, ofrecemos servicio técnico especializado para mantenimiento y reparaciones.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Realizan envíos a todo Chile?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sí, realizamos envíos a todo el territorio nacional. Los tiempos de entrega varían según la región, pero generalmente son de 3 a 7 días hábiles.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Ofrecen capacitación para el uso de equipos?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sí, ofrecemos capacitación técnica para el correcto uso y mantenimiento de nuestros equipos. Contamos con técnicos especializados que pueden visitar su empresa.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Qué formas de pago aceptan?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Aceptamos tarjetas de débito y crédito a través de WebPay Plus, transferencias bancarias y pagos en efectivo. También ofrecemos planes de financiamiento para compras mayores.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Tienen stock permanente de todos los productos?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Mantenemos stock de nuestros productos más demandados. Para equipos especializados, el tiempo de entrega puede ser de 15 a 30 días dependiendo de la disponibilidad del fabricante.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">Contacto</h2>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-white">Información de Contacto</h3>
+                        <div class="space-y-4">
+                            <a href="tel:+56941058461" class="flex items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow hover:shadow-lg transition-shadow">
+                                <i class="fas fa-phone text-2xl text-blue-500 mr-4"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-800 dark:text-white">Teléfono</p>
+                                    <p class="text-gray-600 dark:text-gray-300">+569 4105 8461</p>
+                                </div>
+                            </a>
+                            <a href="/cdn-cgi/l/email-protection#98cceaf7f5e8f7ebdbf0f1f4fdd8fff5f9f1f4b6fbf7f5" class="flex items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow hover:shadow-lg transition-shadow">
+                                <i class="fas fa-envelope text-2xl text-green-500 mr-4"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-800 dark:text-white">Email</p>
+                                    <p class="text-gray-600 dark:text-gray-300"><span class="__cf_email__" data-cfemail="4d193f22203d223e0e252421280d2a202c2421632e2220">[email&#160;protected]</span></p>
+                                </div>
+                            </a>
+                            <a href="https://wa.me/56941058461" target="_blank" class="flex items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow hover:shadow-lg transition-shadow">
+                                <i class="fab fa-whatsapp text-2xl text-green-600 mr-4"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-800 dark:text-white">WhatsApp</p>
+                                    <p class="text-gray-600 dark:text-gray-300">+569 4105 8461</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="mt-8">
+                            <h4 class="text-lg font-semibold mb-4 text-gray-800 dark:text-white">Síguenos en Redes Sociales</h4>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="https://www.instagram.com/TromposChile/" target="_blank" class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="https://www.facebook.com/TromposChile" target="_blank" class="social-link facebook">
+                                    <i class="fab fa-facebook"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="https://www.threads.com/@TromposChile" target="_blank" class="social-link threads">
+                                    <i class="fab fa-threads"></i>
+                                    <span>Threads</span>
+                                </a>
+                                <a href="https://www.tiktok.com/@TromposChile" target="_blank" class="social-link tiktok">
+                                    <i class="fab fa-tiktok"></i>
+                                    <span>TikTok</span>
+                                </a>
+                                <a href="https://www.youtube.com/@TromposChile" target="_blank" class="social-link youtube">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>YouTube</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-white">Ubicación</h3>
+                        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.0157!2d-70.6482!3d-33.4489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDI2JzU2LjAiUyA3MMKwMzgnNTMuNSJX!5e0!3m2!1sen!2scl!4v1234567890" 
+                                width="100%" 
+                                height="400" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="w-full h-96">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">TromposChile</h3>
+                    <p class="text-gray-300 mb-4">Especialistas en metalúrgica con más de 10 años de experiencia. Calidad y confiabilidad en cada producto.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/TromposChile/" target="_blank" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/TromposChile" target="_blank" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TromposChile" target="_blank" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#nosotros" class="text-gray-300 hover:text-white">Nosotros</a></li>
+                        <li><a href="#tienda" class="text-gray-300 hover:text-white">Tienda</a></li>
+                        <li><a href="#blog" class="text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="#contacto" class="text-gray-300 hover:text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <p class="text-gray-300 mb-2">
+                        <i class="fas fa-phone mr-2"></i>
+                        +569 4105 8461
+                    </p>
+                    <p class="text-gray-300">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6531170a08150a16260d0c0900250208040c094b060a08">[email&#160;protected]</a>
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2024 TromposChile. Todos los derechos reservados. Desarrollado con ❤️ para la industria metalúrgica.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 pointer-events-none z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/56941058461" target="_blank" id="whatsapp-float" class="fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 z-50 group">
+        <i class="fab fa-whatsapp text-xl"></i>
+        <span class="absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            Comunícate con nosotros
+        </span>
+    </a>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800 dark:text-white">Carrito de Compras</h2>
+                        <button id="close-cart" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <div id="cart-items" class="space-y-4 mb-6">
+                        <!-- Cart items will be loaded here -->
+                    </div>
+                    <div class="border-t pt-4">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xl font-semibold text-gray-800 dark:text-white">Total:</span>
+                            <span id="cart-total" class="text-2xl font-bold text-blue-600 dark:text-blue-400">$0</span>
+                        </div>
+                        <button id="checkout-btn" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg font-semibold transition-colors">
+                            Proceder al Pago
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800 dark:text-white">Finalizar Compra</h2>
+                        <button id="close-checkout" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <form id="checkout-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Nombre *</label>
+                                <input type="text" required class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Apellido *</label>
+                                <input type="text" required class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Empresa</label>
+                                <input type="text" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">País *</label>
+                                <select required class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white">
+                                    <option value="Chile">Chile</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Región *</label>
+                                <select required class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white">
+                                    <option value="">Seleccionar región</option>
+                                    <option value="Metropolitana">Región Metropolitana</option>
+                                    <option value="Valparaiso">Región de Valparaíso</option>
+                                    <option value="Biobio">Región del Biobío</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Ciudad *</label>
+                                <input type="text" required class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Dirección *</label>
+                                <input type="text" required class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Código Postal</label>
+                                <input type="text" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Teléfono *</label>
+                                <input type="tel" required class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
+                                <input type="email" required class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Mensaje (opcional)</label>
+                                <textarea rows="3" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white"></textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- Order Summary -->
+                        <div class="border-t pt-6">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800 dark:text-white">Tu Pedido</h3>
+                            <div id="checkout-items" class="space-y-2 mb-4">
+                                <!-- Order items will be loaded here -->
+                            </div>
+                            <div class="flex justify-between items-center text-xl font-bold text-gray-800 dark:text-white">
+                                <span>Total:</span>
+                                <span id="checkout-total">$0</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
+                            <i class="fas fa-credit-card mr-2"></i>
+                            Pagar con WebPay Plus
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Modals -->
+    <div id="blog-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 id="blog-modal-title" class="text-2xl font-bold text-gray-800 dark:text-white"></h2>
+                        <button id="close-blog-modal" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <div id="blog-modal-content">
+                        <!-- Blog content will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/index.js"></script>
+    <!--<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>-->
+</body>
+</html>

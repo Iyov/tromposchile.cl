@@ -1,13 +1,13 @@
 # TromposChile.cl
 
 ## Funcionalidades principales:
-✅ Diseño moderno y flat con TailwindCSS
-✅ Tema claro/oscuro con persistencia en localStorage
-✅ Diseño responsivo para todos los dispositivos
-✅ Iconos Font Awesome
-✅ Barra de progreso de scroll
-✅ Botón back-to-top
-✅ Botón flotante de WhatsApp
++ ✅ Diseño moderno y flat con TailwindCSS
++ ✅ Tema claro/oscuro con persistencia en localStorage
++ ✅ Diseño responsivo para todos los dispositivos
++ ✅ Iconos Font Awesome
++ ✅ Barra de progreso de scroll
++ ✅ Botón back-to-top
++ ✅ Botón flotante de WhatsApp
 
 ## Secciones del sitio:
 * Header - Logo, menú de navegación, toggle tema
@@ -22,11 +22,11 @@
 * Footer - Links, resumen, firma
 
 ## Funcionalidades de tienda:
-✅ Catálogo de productos con imágenes, precios, descripciones
-✅ Carrito de compras persistente
-✅ Proceso de checkout completo
-✅ Formulario de datos para facturación
-✅ Integración con WebPay Plus (simulado)
++ ✅ Catálogo de productos con imágenes, precios, descripciones
++ ✅ Carrito de compras persistente
++ ✅ Proceso de checkout completo
++ ✅ Formulario de datos para facturación
++ ✅ Integración con WebPay Plus
 
 ## Datos de contacto:
 * Teléfono: +569 4105 8461

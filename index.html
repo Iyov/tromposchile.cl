@@ -63,7 +63,7 @@
     }
     </script>
 </head>
-<body class="font-sans transition-colors duration-300">
+<body class="font-sans transition-colors duration-300 bg-white dark:bg-gray-900">
     <!-- Progress Bar -->
     <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-purple-600 z-50 transition-all duration-300"></div>
 
@@ -79,21 +79,21 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center space-x-6">
-                    <a href="#nosotros" class="nav-link">Nosotros</a>
-                    <a href="#categorias" class="nav-link">Categorías</a>
-                    <a href="#destacados" class="nav-link">Destacados</a>
-                    <a href="#tienda" class="nav-link">Tienda</a>
-                    <a href="#testimonios" class="nav-link">Testimonios</a>
-                    <a href="#blog" class="nav-link">Blog</a>
-                    <a href="#faq" class="nav-link">FAQ</a>
-                    <a href="#contacto" class="nav-link">Contacto</a>
+                    <a href="#nosotros" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Nosotros</a>
+                    <a href="#categorias" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Categorías</a>
+                    <a href="#destacados" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Destacados</a>
+                    <a href="#tienda" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Tienda</a>
+                    <a href="#testimonios" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Testimonios</a>
+                    <a href="#blog" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Blog</a>
+                    <a href="#faq" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">FAQ</a>
+                    <a href="#contacto" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Contacto</a>
                 </div>
 
                 <!-- Theme Toggle & Cart -->
                 <div class="flex items-center space-x-4">
-                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                        <i class="fas fa-moon dark:hidden"></i>
-                        <i class="fas fa-sun hidden dark:inline"></i>
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-gray-800 dark:text-white">
+                        <i id="theme-icon-light" class="fas fa-moon"></i>
+                        <i id="theme-icon-dark" class="fas fa-sun hidden"></i>
                     </button>
                     <button id="cart-toggle" class="relative p-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white transition-colors">
                         <i class="fas fa-shopping-cart"></i>
@@ -108,14 +108,14 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="lg:hidden hidden mt-4 pb-4">
                 <div class="flex flex-col space-y-2">
-                    <a href="#nosotros" class="nav-link-mobile">Nosotros</a>
-                    <a href="#categorias" class="nav-link-mobile">Categorías</a>
-                    <a href="#destacados" class="nav-link-mobile">Destacados</a>
-                    <a href="#tienda" class="nav-link-mobile">Tienda</a>
-                    <a href="#testimonios" class="nav-link-mobile">Testimonios</a>
-                    <a href="#blog" class="nav-link-mobile">Blog</a>
-                    <a href="#faq" class="nav-link-mobile">FAQ</a>
-                    <a href="#contacto" class="nav-link-mobile">Contacto</a>
+                    <a href="#nosotros" class="nav-link-mobile block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Nosotros</a>
+                    <a href="#categorias" class="nav-link-mobile block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Categorías</a>
+                    <a href="#destacados" class="nav-link-mobile block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Destacados</a>
+                    <a href="#tienda" class="nav-link-mobile block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Tienda</a>
+                    <a href="#testimonios" class="nav-link-mobile block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Testimonios</a>
+                    <a href="#blog" class="nav-link-mobile block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Blog</a>
+                    <a href="#faq" class="nav-link-mobile block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">FAQ</a>
+                    <a href="#contacto" class="nav-link-mobile block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Contacto</a>
                 </div>
             </div>
         </nav>
@@ -375,48 +375,48 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">Preguntas Frecuentes</h2>
                 <div class="max-w-3xl mx-auto">
-                    <div class="faq-item">
-                        <button class="faq-question">
+                    <div class="faq-item border border-gray-200 dark:border-gray-600 rounded-lg mb-4 overflow-hidden bg-white dark:bg-gray-800 transition-colors duration-300">
+                        <button class="faq-question w-full text-left p-6 flex justify-between items-center text-gray-800 dark:text-white font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300">
                             <span>¿Qué garantía tienen sus productos?</span>
-                            <i class="fas fa-chevron-down"></i>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer px-6 pb-6 text-gray-600 dark:text-gray-300 leading-relaxed max-h-0 overflow-hidden transition-all duration-300">
                             <p>Todos nuestros productos cuentan con garantía de 12 meses contra defectos de fabricación. Además, ofrecemos servicio técnico especializado para mantenimiento y reparaciones.</p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
+                    <div class="faq-item border border-gray-200 dark:border-gray-600 rounded-lg mb-4 overflow-hidden bg-white dark:bg-gray-800 transition-colors duration-300">
+                        <button class="faq-question w-full text-left p-6 flex justify-between items-center text-gray-800 dark:text-white font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300">
                             <span>¿Realizan envíos a todo Chile?</span>
-                            <i class="fas fa-chevron-down"></i>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer px-6 pb-6 text-gray-600 dark:text-gray-300 leading-relaxed max-h-0 overflow-hidden transition-all duration-300">
                             <p>Sí, realizamos envíos a todo el territorio nacional. Los tiempos de entrega varían según la región, pero generalmente son de 3 a 7 días hábiles.</p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
+                    <div class="faq-item border border-gray-200 dark:border-gray-600 rounded-lg mb-4 overflow-hidden bg-white dark:bg-gray-800 transition-colors duration-300">
+                        <button class="faq-question w-full text-left p-6 flex justify-between items-center text-gray-800 dark:text-white font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300">
                             <span>¿Ofrecen capacitación para el uso de equipos?</span>
-                            <i class="fas fa-chevron-down"></i>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer px-6 pb-6 text-gray-600 dark:text-gray-300 leading-relaxed max-h-0 overflow-hidden transition-all duration-300">
                             <p>Sí, ofrecemos capacitación técnica para el correcto uso y mantenimiento de nuestros equipos. Contamos con técnicos especializados que pueden visitar su empresa.</p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
+                    <div class="faq-item border border-gray-200 dark:border-gray-600 rounded-lg mb-4 overflow-hidden bg-white dark:bg-gray-800 transition-colors duration-300">
+                        <button class="faq-question w-full text-left p-6 flex justify-between items-center text-gray-800 dark:text-white font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300">
                             <span>¿Qué formas de pago aceptan?</span>
-                            <i class="fas fa-chevron-down"></i>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer px-6 pb-6 text-gray-600 dark:text-gray-300 leading-relaxed max-h-0 overflow-hidden transition-all duration-300">
                             <p>Aceptamos tarjetas de débito y crédito a través de WebPay Plus, transferencias bancarias y pagos en efectivo. También ofrecemos planes de financiamiento para compras mayores.</p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
+                    <div class="faq-item border border-gray-200 dark:border-gray-600 rounded-lg mb-4 overflow-hidden bg-white dark:bg-gray-800 transition-colors duration-300">
+                        <button class="faq-question w-full text-left p-6 flex justify-between items-center text-gray-800 dark:text-white font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300">
                             <span>¿Tienen stock permanente de todos los productos?</span>
-                            <i class="fas fa-chevron-down"></i>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer px-6 pb-6 text-gray-600 dark:text-gray-300 leading-relaxed max-h-0 overflow-hidden transition-all duration-300">
                             <p>Mantenemos stock de nuestros productos más demandados. Para equipos especializados, el tiempo de entrega puede ser de 15 a 30 días dependiendo de la disponibilidad del fabricante.</p>
                         </div>
                     </div>
@@ -459,7 +459,7 @@
                         <!-- Social Media -->
                         <div class="mt-8">
                             <h4 class="text-lg font-semibold mb-4 text-gray-800 dark:text-white">Síguenos en Redes Sociales</h4>
-                            <div class="flex flex-wrap gap-4">
+                            <div class="flex flex-wrap gap-4 text-gray-300">
                                 <a href="https://www.instagram.com/TromposChile/" target="_blank" class="social-link instagram">
                                     <i class="fab fa-instagram"></i>
                                     <span>Instagram</span>
@@ -546,14 +546,14 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-300">&copy; 2025 TromposChile. Todos los derechos reservados.</p>
+                <p class="text-gray-350">&copy; 2025 TromposChile. Todos los derechos reservados.</p>
                 <p class="text-gray-300">Desarrollado por <a href="https://franciscobarrientos.cl/" target="_blank">Francisco Barrientos</a></p>
             </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-6 right-6 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 pointer-events-none z-50">
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 invisible z-50">
         <i class="fas fa-arrow-up"></i>
     </button>
 

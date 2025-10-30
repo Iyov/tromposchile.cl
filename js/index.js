@@ -280,16 +280,33 @@ function initializeApp() {
 function setupTheme() {
     const themeToggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
+    const lightIcon = document.getElementById('theme-icon-light');
+    const darkIcon = document.getElementById('theme-icon-dark');
     
     // Apply saved theme
     if (currentTheme === 'dark') {
         html.classList.add('dark');
+        lightIcon.classList.add('hidden');
+        darkIcon.classList.remove('hidden');
+    } else {
+        html.classList.remove('dark');
+        lightIcon.classList.remove('hidden');
+        darkIcon.classList.add('hidden');
     }
     
     themeToggle.addEventListener('click', function() {
         html.classList.toggle('dark');
         currentTheme = html.classList.contains('dark') ? 'dark' : 'light';
         localStorage.setItem('trompos-theme', currentTheme);
+        
+        // Toggle icons
+        if (currentTheme === 'dark') {
+            lightIcon.classList.add('hidden');
+            darkIcon.classList.remove('hidden');
+        } else {
+            lightIcon.classList.remove('hidden');
+            darkIcon.classList.add('hidden');
+        }
     });
 }
 
@@ -379,9 +396,11 @@ function setupBackToTop() {
     
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > 300) {
-            backToTopBtn.classList.add('show');
+            backToTopBtn.classList.remove('opacity-0', 'invisible');
+            backToTopBtn.classList.add('opacity-100', 'visible');
         } else {
-            backToTopBtn.classList.remove('show');
+            backToTopBtn.classList.add('opacity-0', 'invisible');
+            backToTopBtn.classList.remove('opacity-100', 'visible');
         }
     });
     
@@ -401,17 +420,22 @@ function setupFAQ() {
         question.addEventListener('click', function() {
             const answer = this.nextElementSibling;
             const isActive = this.classList.contains('active');
+            const chevron = this.querySelector('i');
             
             // Close all FAQ items
             document.querySelectorAll('.faq-question').forEach(q => {
                 q.classList.remove('active');
                 q.nextElementSibling.classList.remove('active');
+                q.nextElementSibling.style.maxHeight = '0';
+                q.querySelector('i').style.transform = 'rotate(0deg)';
             });
             
             // Open clicked item if it wasn't active
             if (!isActive) {
                 this.classList.add('active');
                 answer.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                chevron.style.transform = 'rotate(180deg)';
             }
         });
     });

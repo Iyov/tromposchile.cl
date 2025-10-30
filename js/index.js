@@ -11,7 +11,7 @@ const products = [
         name: 'Trompo Industrial Pro',
         category: 'trompos',
         price: 299990,
-        image: 'https://via.placeholder.com/300x200/3B82F6/FFFFFF?text=Trompo+Industrial',
+        image: 'gradient-blue-trompo',
         description: 'Trompo de alta resistencia para uso industrial intensivo. Fabricado con materiales de primera calidad.'
     },
     {
@@ -19,7 +19,7 @@ const products = [
         name: 'Betonera Max 350L',
         category: 'betoneras',
         price: 1299990,
-        image: 'https://via.placeholder.com/300x200/10B981/FFFFFF?text=Betonera+Max',
+        image: 'gradient-green-betonera',
         description: 'Betonera de 350 litros con motor de alta potencia. Ideal para obras de construcción medianas y grandes.'
     },
     {
@@ -27,7 +27,7 @@ const products = [
         name: 'Placa Steel Premium',
         category: 'placas',
         price: 89990,
-        image: 'https://via.placeholder.com/300x200/8B5CF6/FFFFFF?text=Placa+Steel',
+        image: 'gradient-purple-placa',
         description: 'Placa de acero reforzado para construcción pesada. Resistente a la corrosión y deformación.'
     },
     {
@@ -35,7 +35,7 @@ const products = [
         name: 'Kit Herramientas Completo',
         category: 'herramientas',
         price: 199990,
-        image: 'https://via.placeholder.com/300x200/F59E0B/FFFFFF?text=Kit+Herramientas',
+        image: 'gradient-yellow-herramientas',
         description: 'Set completo de herramientas para metalúrgica. Incluye todo lo necesario para trabajos profesionales.'
     },
     {
@@ -43,7 +43,7 @@ const products = [
         name: 'Trompo Compacto',
         category: 'trompos',
         price: 149990,
-        image: 'https://via.placeholder.com/300x200/EF4444/FFFFFF?text=Trompo+Compacto',
+        image: 'gradient-red-trompo',
         description: 'Trompo compacto ideal para trabajos menores y espacios reducidos. Fácil transporte y manejo.'
     },
     {
@@ -51,7 +51,7 @@ const products = [
         name: 'Betonera Portátil 180L',
         category: 'betoneras',
         price: 799990,
-        image: 'https://via.placeholder.com/300x200/06B6D4/FFFFFF?text=Betonera+Portatil',
+        image: 'gradient-cyan-betonera',
         description: 'Betonera portátil de 180 litros. Perfecta para proyectos residenciales y trabajos menores.'
     },
     {
@@ -59,7 +59,7 @@ const products = [
         name: 'Placa Reforzada Industrial',
         category: 'placas',
         price: 159990,
-        image: 'https://via.placeholder.com/300x200/84CC16/FFFFFF?text=Placa+Industrial',
+        image: 'gradient-lime-placa',
         description: 'Placa reforzada para uso industrial pesado. Máxima durabilidad y resistencia.'
     },
     {
@@ -67,19 +67,67 @@ const products = [
         name: 'Martillo Neumático Pro',
         category: 'herramientas',
         price: 349990,
-        image: 'https://via.placeholder.com/300x200/F97316/FFFFFF?text=Martillo+Neumatico',
+        image: 'gradient-orange-martillo',
         description: 'Martillo neumático profesional para demolición y construcción. Alta potencia y durabilidad.'
     }
 ];
+
+// Image configurations for products
+const imageConfigs = {
+    'gradient-blue-trompo': {
+        gradient: 'from-blue-500 to-blue-600',
+        icon: 'fas fa-cog',
+        label: 'Trompo Industrial'
+    },
+    'gradient-green-betonera': {
+        gradient: 'from-green-500 to-green-600',
+        icon: 'fas fa-industry',
+        label: 'Betonera'
+    },
+    'gradient-purple-placa': {
+        gradient: 'from-purple-500 to-purple-600',
+        icon: 'fas fa-layer-group',
+        label: 'Placa Steel'
+    },
+    'gradient-yellow-herramientas': {
+        gradient: 'from-yellow-500 to-orange-500',
+        icon: 'fas fa-tools',
+        label: 'Herramientas'
+    },
+    'gradient-red-trompo': {
+        gradient: 'from-red-500 to-red-600',
+        icon: 'fas fa-cog',
+        label: 'Trompo Compacto'
+    },
+    'gradient-cyan-betonera': {
+        gradient: 'from-cyan-500 to-cyan-600',
+        icon: 'fas fa-industry',
+        label: 'Betonera Portátil'
+    },
+    'gradient-lime-placa': {
+        gradient: 'from-lime-500 to-lime-600',
+        icon: 'fas fa-layer-group',
+        label: 'Placa Industrial'
+    },
+    'gradient-orange-martillo': {
+        gradient: 'from-orange-500 to-orange-600',
+        icon: 'fas fa-hammer',
+        label: 'Martillo'
+    }
+};
 
 // Blog Content
 const blogContent = {
     blog1: {
         title: 'Innovaciones en Metalurgia Industrial',
-        image: 'https://via.placeholder.com/800x400/3B82F6/FFFFFF?text=Metalurgia+Industrial',
         content: `
             <div class="prose dark:prose-invert max-w-none">
-                <img src="https://via.placeholder.com/800x400/3B82F6/FFFFFF?text=Metalurgia+Industrial" alt="Metalurgia Industrial" class="w-full h-64 object-cover rounded-lg mb-6">
+                <div class="h-64 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <i class="fas fa-industry text-8xl mb-4"></i>
+                        <div class="text-xl font-semibold">Metalurgia Industrial</div>
+                    </div>
+                </div>
                 
                 <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
                     La industria metalúrgica está experimentando una revolución tecnológica sin precedentes. Las nuevas tecnologías están transformando la manera en que trabajamos con metales y desarrollamos equipos industriales.
@@ -112,10 +160,14 @@ const blogContent = {
     },
     blog2: {
         title: 'Guía de Mantenimiento de Equipos',
-        image: 'https://via.placeholder.com/800x400/10B981/FFFFFF?text=Mantenimiento+Equipos',
         content: `
             <div class="prose dark:prose-invert max-w-none">
-                <img src="https://via.placeholder.com/800x400/10B981/FFFFFF?text=Mantenimiento+Equipos" alt="Mantenimiento de Equipos" class="w-full h-64 object-cover rounded-lg mb-6">
+                <div class="h-64 bg-gradient-to-br from-green-500 to-green-600 rounded-lg mb-6 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <i class="fas fa-tools text-8xl mb-4"></i>
+                        <div class="text-xl font-semibold">Mantenimiento de Equipos</div>
+                    </div>
+                </div>
                 
                 <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
                     El mantenimiento adecuado de los equipos de metalurgia es fundamental para garantizar su rendimiento óptimo y prolongar su vida útil. En esta guía te compartimos los mejores consejos.
@@ -153,10 +205,14 @@ const blogContent = {
     },
     blog3: {
         title: 'Seguridad en el Trabajo Industrial',
-        image: 'https://via.placeholder.com/800x400/8B5CF6/FFFFFF?text=Seguridad+Industrial',
         content: `
             <div class="prose dark:prose-invert max-w-none">
-                <img src="https://via.placeholder.com/800x400/8B5CF6/FFFFFF?text=Seguridad+Industrial" alt="Seguridad Industrial" class="w-full h-64 object-cover rounded-lg mb-6">
+                <div class="h-64 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg mb-6 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <i class="fas fa-hard-hat text-8xl mb-4"></i>
+                        <div class="text-xl font-semibold">Seguridad Industrial</div>
+                    </div>
+                </div>
                 
                 <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
                     La seguridad en el trabajo industrial es nuestra prioridad número uno. Trabajar con equipos de metalurgia requiere conocimiento, preparación y el uso adecuado de equipos de protección personal.
@@ -377,8 +433,15 @@ function createProductCard(product) {
     card.className = 'product-card';
     card.dataset.category = product.category;
     
+    const imageConfig = imageConfigs[product.image];
+    
     card.innerHTML = `
-        <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover">
+        <div class="h-48 bg-gradient-to-br ${imageConfig.gradient} flex items-center justify-center">
+            <div class="text-center text-white">
+                <i class="${imageConfig.icon} text-6xl mb-2"></i>
+                <div class="text-sm font-semibold">${imageConfig.label}</div>
+            </div>
+        </div>
         <div class="p-4">
             <h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-white">${product.name}</h3>
             <p class="text-gray-600 dark:text-gray-300 mb-3 text-sm">${product.description}</p>
@@ -484,10 +547,14 @@ function updateCartModal() {
     cart.forEach(item => {
         total += item.price * item.quantity;
         
+        const imageConfig = imageConfigs[item.image];
+        
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
         cartItem.innerHTML = `
-            <img src="${item.image}" alt="${item.name}">
+            <div class="w-16 h-16 bg-gradient-to-br ${imageConfig.gradient} rounded-lg flex items-center justify-center">
+                <i class="${imageConfig.icon} text-white text-xl"></i>
+            </div>
             <div class="flex-1">
                 <h4 class="font-semibold text-gray-800 dark:text-white">${item.name}</h4>
                 <p class="text-gray-600 dark:text-gray-300">$${formatPrice(item.price)}</p>
